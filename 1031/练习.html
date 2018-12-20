@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+    .list li{
+        border:3px solid #ccc;
+        background:pink;
+        width:400px;
+        height:100px;
+    }
+	</style>
+</head>
+<body>
+	<ul class="list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10 </li>
+	</ul>
+</body>
+<script src="jquery-3.3.1.js"></script>
+<script>
+// var s=$(".box p:nth-of-type(2)")
+// 父级下第一个子元素:first-child
+
+$(".list li").mouseenter(function(){
+$(".list li").css("background","pink")
+$(this).css("background","deeppink")
+$(this).next().css("background","deeppink")
+$(this).prev().css("background","deeppink")
+if($(this).index()==$(".list li:first-child").index()){
+	$(this).css("background","blue")
+}
+if($(this).index()==$(".list li").length-1){
+	$(this).css("background","blue")
+}
+})
+$(".list li").mouseleave(function(){
+$(this).css("background","pink")
+$(this).next().css("background","pink")
+$(this).prev().css("background","pink")
+})
+</script>
+</html>

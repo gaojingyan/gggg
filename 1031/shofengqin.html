@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		body{
+			 -moz-user-select:none;/*火狐*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -ms-user-select:none;/*IE10*/
+    -khtml-user-select:none;/*早期浏览器*/
+      user-select:none;
+
+		}
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			body{
+				background: #eeeeee;
+			}
+			.bigbox{
+				width: 190px;
+				border: 1px solid #DDDDDD;
+				margin: 0 auto;
+			}
+			dt{
+				height: 56px;
+				width: 190px;
+				font-size: 16px;
+				text-align: center;
+				line-height: 55px;
+				background: #FFFFFF;
+                cursor:pointer;
+			}
+			/*dl{
+				height: 56px;
+				width: 190px;
+				overflow: hidden;
+				
+			}*/
+			dd{
+				display: none;
+			}
+			li{
+				width: 190px;
+				height: 41px;
+				text-align: center;
+				background: #e5e3e3;
+				color: #666666;
+				line-height: 40px;
+				
+			}
+			span{
+				display: inline-block;
+				transform: rotate(270deg);
+			}
+			.active{
+				background:red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bigbox">
+			<dl class="done">
+				<dt>竞拍流程<span><</span></dt>
+				<dd>
+					<ul>
+						<li>登录注册</li>
+						<li>实地看样</li>
+						<li>阅读广告</li>
+						<li>竞价准备</li>
+						<li>参与竞价</li>
+						<li>成交确认</li>
+						<li>交款提贷</li>
+						<li>尾款结算</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl class="dtwo">
+				<dt>规则详解<span><</span></dt>
+				<dd>
+					<ul>
+						<li>增价拍</li>
+						<li>一口价</li>
+						<li>秒杀价</li>
+						<li>保证金规则</li>
+						<li>优先回购规则</li>
+						<li>看货规则</li>
+						<li>提货规则</li>
+						<li>成交价款规则</li>
+						<li>竞拍规则</li>
+						<li>拍卖规则</li>
+						<li>竞买指南</li>
+						<li>服务对象</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl class="tthree">
+				<dt>常见问题<span><</span></dt>
+				<dd>
+					<ul>
+						<li>总说明</li>
+						<li>注册</li>
+						<li>标的物浏览及查勘</li>
+						<li>阅读公告</li>
+						<li>竞拍资格的获取</li>
+						<li>参与竞拍</li>
+						<li>成交阙文</li>
+						<li>提货交割</li>
+						<li>如何发布物资信息</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+	</body>
+	<script src="jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("dt").click(function(){
+				//$("dt").index(this) 找到点击当前dt的下标
+				$("dd").hide().eq($("dt").index(this)).show()
+				if($(this).hasClass("active")){
+                $(this).removeClass("active")
+                $("ul").eq($("dt").index(this)).hide()
+				}
+				else{
+					$("h3").removeClass("active").eq($("dt").index(this))
+					$(this).addClass("active")
+                $("ul").eq($("dt").index(this)).show()
+				}
+				
+//				$(this).next().show()
+			})
+		})
+	</script>
+</html>

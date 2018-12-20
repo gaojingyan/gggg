@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index()方法</title>
+	<style>
+    p{
+    	font-size:30px;
+    }
+	</style>
+</head>
+<body>
+<div class="box">
+	<p class="p">1</p>
+	<p class="qqq">2</p>
+	<p>3</p>
+	<p class="p">4</p>
+	<p>5</p>
+	<p>6</p>
+</div>
+</body>
+<script src="jquery-3.3.1.js"></script>
+<script>
+/*
+index()
+1.不传参数 获取当前索引的下标
+2.传参数 获取指定元素的索引 参数指某个元素 dom对象 jq对象 
+3.传参数 如果找不到 返回-1
+类似于js中的indexOf()
+ */
+
+
+
+
+// $(function(){
+// 	$(".box p").click(function(){
+// 		//获取p标签的对应下标
+// 		alert($(".box p").index(this))//dom对象
+// 		alert($(".box p").index($(this)))//jq对象
+
+// 	})
+// })
+
+
+
+
+
+/*
+children() 查找父级中的子元素
+1.不传参数 查找父级中的所有子元素 参数："选择器"
+2.传参数 查找父级中的某类子元素
+ */
+// $(function(){
+// 	var ele=$(".box").children(".p")
+// 	console.log(ele)
+// 	ele.css("color","deeppink")
+// })
+
+
+
+
+
+/*
+parents 获取所有的长辈节点
+parent() 查找父节点
+next() 下一个兄弟
+prev() 上一个兄弟
+nextAll() 下面的所有兄弟
+prevAll() 上面的所有兄弟
+siblings() 不传参数 查找除了某个元素的所有兄弟节点
+           传参数 查找除了某个元素的指定兄弟节点
+find() 从父级里找某个子元素
+$(.list).find("li.lis")
+not() 筛选不包含某个元素
+add() 附带某个元素
+filter() 筛选某个元素
+has() 是否包含某个元素的父元素
+
+ */
+$(function(){
+	var ele=$(".box").parent()
+	console.log(ele)
+	ele.css("color","deeppink")
+})
+</script>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	ul,li,p{
+		margin:0;
+		padding:0;
+	}
+	.list .list-li{
+    border:3px solid #ccc;
+    background:deeppink;
+    width:400px;
+    height:40px;
+    overflow:hidden;
+    text-align:center;
+	}
+	.list .list-li p{
+    padding:10px 0;
+	}
+	.list .list-li ul li{
+    border:1px solid #F760B0;
+    background:pink;
+    width:400px;
+    height:40px;
+    overflow:hidden;
+    
+	}
+	</style>
+</head>
+<body>
+	<ul class="list">
+		<li class="list-li"><p>地区</p>
+		<ul>
+			<li>北京</li>
+			<li>上海</li>
+			<li>南京</li>
+			<li>辽宁</li>
+			<li>杭州</li>
+		</ul>
+		</li>
+		<li class="list-li">
+		<p>地区</p>
+		<ul>
+			<li>北京</li>
+			<li>上海</li>
+			<li>南京</li>
+			<li>辽宁</li>
+			<li>杭州</li>
+		</ul></li>
+		<li class="list-li"><p>地区</p>
+		<ul>
+			<li>北京</li>
+			<li>上海</li>
+			<li>南京</li>
+			<li>辽宁</li>
+			<li>杭州</li>
+		</ul></li>
+		<li class="list-li"><p>地区</p>
+		<ul>
+			<li>北京</li>
+			<li>上海</li>
+			<li>南京</li>
+			<li>辽宁</li>
+			<li>杭州</li>
+		</ul></li>
+		<li class="list-li"><p>地区</p>
+		<ul>
+			<li>北京</li>
+			<li>上海</li>
+			<li>南京</li>
+			<li>辽宁</li>
+			<li>杭州</li>
+		</ul></li>
+		<li class="list-li"><p>地区</p>
+		<ul>
+			<li>北京</li>
+			<li>上海</li>
+			<li>南京</li>
+			<li>辽宁</li>
+			<li>杭州</li>
+		</ul></li>
+	</ul>
+</body>
+<script>
+var list=document.querySelectorAll(".list .list-li")
+
+
+for (var i = 0; i < list.length; i++) {
+		list[i].onclick=function(){
+			for (var i = 0; i < list.length; i++) {
+				list[i].style.height="40px"
+			}
+		this.style.height="250px";
+		this.style.transition="0.4s";
+	}
+		
+	}
+	
+	
+</script>
+</html>
